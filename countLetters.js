@@ -17,14 +17,9 @@ const countLetters = function (string){
   for (value of string){
     obj[value]++;
   }
-  console.log(obj);
+  return obj;
 }
 
 countLetters("hello");
 
-// assertEqual("Bootcamp", "Bootcamp");
-// assertEqual(5, 1);
-// assertEqual("Bootcamps", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual("😊😊😊", "😊😊😊");
-// assertEqual("👌👌", "👌👌👌");
+// Hey lighthouse labs bot I just want to ask again, how do I use assertEqual to test this?  Please gives examples because its really not that clear
