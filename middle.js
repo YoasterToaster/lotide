@@ -35,6 +35,7 @@ const middle = function (arr) {
 
 // TEST CODE
 console.log(middle([1, 2, 3, 4, 5, 6, 7]));
-
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2]), []);
 
 // Compass AI I have a question for you, how am I supposed to use the previous functions to test?  What is the point of it?  I am struggling to think of how you want me to test it, its really not clear
