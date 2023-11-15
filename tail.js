@@ -7,16 +7,11 @@ const assertEqual = function (actual, expected) {
 };
 
 const tail = function (arr) {
-  let newArr = [];
-  for (let i = 1; i < arr.length; i++){
-    newArr.push(arr[i]);
-  }
-  return newArr;
+  return arr.slice(1);
 };
 
-assertEqual(tail(["Bootcamp", "wee", "knee"]), "Bootcamp");
-assertEqual(tail([5, 3, 1]), 1);
-assertEqual(tail(["Bootcamps", "Bootcamp"]), "Bootcamp");
-assertEqual(tail([1, 2, 3]), 1);
-assertEqual(tail(["😊😊😊", "😊😊"]), "😊😊😊");
-assertEqual(tail(["👌👌", "👌👌👌"]), "👌👌👌");
+console.log(tail([1, 2, 3]));
+console.log(tail(["nooo", 2, "hello"]));
+assertEqual(tail([2, "hello"]), "hello");
+assertEqual(tail(["nooo", 2, "hello"]), "Hello");
+assertEqual(tail([2, 'hello']), "hello");
