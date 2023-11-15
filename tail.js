@@ -13,5 +13,7 @@ const tail = function (arr) {
 console.log(tail([1, 2, 3]));
 console.log(tail(["nooo", 2, "hello"]));
 assertEqual(tail([2, "hello"]), "hello");
-assertEqual(tail(["nooo", 2, "hello"]), "Hello");
-assertEqual(tail([2, 'hello']), "hello");
+assertEqual(tail(["nooo", 2, "hello"]), "hello");
+assertEqual(tail([2, 'hello'])[0], "hello");
+assertEqual(tail([]), true);
+assertEqual(tail([]), false);
