@@ -20,8 +20,8 @@ const eqArrays = function (actual, expected) {
   return true;
 };
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), false);
-assertArraysEqual(eqArrays(["Bootcamps", "wee"], ["Bootcamps", "wee"]), true);
-assertArraysEqual(eqArrays(["Bootcamps", "wee"], ["Bootcamps", "wee"]), false);
-assertArraysEqual(eqArrays(["Bootcamps", "wee"], ["Bootcamps", "wee"]), false);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual(["Bootcamps", "wee"], ["Bootcamps", "wee"]);
+assertArraysEqual(["Bootcamps", "wee"], ["Bootcamps", "wee"]);
+assertArraysEqual(["Bootcamps", "wee"], ["Bootcamps", "wee"]);
