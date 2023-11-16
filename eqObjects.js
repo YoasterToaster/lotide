@@ -33,6 +33,7 @@ const famousPersonalities = {
 };
 
 const eqObjects = function(obj1, obj2) {
+  // Ill probably add more comments later but I am kinda tired and I console.log'd quite a ton.
   if (Object.entries(obj1).length === Object.entries(obj2).length) {
     for (let key in obj1) {
       if (obj1[key] !== obj2[key] && obj2[key] !== obj1[key] && !Array.isArray(obj1[key]) && !Array.isArray(obj2[key])) {
