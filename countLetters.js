@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`Assertion Passed: ${actual} === ${expected}`);
   } else if (actual !== expected) {
@@ -6,12 +6,12 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function (string) {
+const countLetters = function(string) {
 
-  const obj = {}
-  let regex = /[a-zA-Z]/
+  const obj = {};
+  let regex = /[a-zA-Z]/;
   // Checks if value is a letter then creates the value so I can then iterate it since it exists because you cannot create an object value and increment it in the same statement
-  for (value of string) {
+  for (let value of string) {
     if (regex.test(value)) {
       if (obj[value]) {
         obj[value]++;
@@ -21,7 +21,7 @@ const countLetters = function (string) {
     }
   }
   return obj;
-}
+};
 // TEST CODE
 console.log(countLetters("hello"));
 const result = countLetters("hello");
