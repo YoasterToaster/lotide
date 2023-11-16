@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`Assertion Passed: ${actual} === ${expected}`);
   } else if (actual !== expected) {
@@ -6,7 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function (actual, expected) {
+const eqArrays = function(actual, expected) {
   //If the lengths are not the same then it will return false
   if (actual.length !== expected.length) {
     return false;
@@ -32,13 +32,13 @@ const famousPersonalities = {
   ameliaEarhart: "1897-1937"
 };
 
-const eqObjects = function (obj1, obj2) {
+const eqObjects = function(obj1, obj2) {
   if (Object.entries(obj1).length === Object.entries(obj2).length) {
     for (let key in obj1) {
       if (obj1[key] !== obj2[key] && !Array.isArray(obj1[key]) && !Array.isArray(obj2[key])) {
         return false;
       } else if (Array.isArray(obj1[key]) && Array.isArray(obj2[key]) && !eqArrays(obj1[key], obj2[key])) {
-        
+        return false;
       }
     }
     return true;
