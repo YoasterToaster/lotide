@@ -15,9 +15,7 @@ const countLetters = function (string){
   }
   // The second loop iterates upon each of the pre-exist values
   for (value of string){
-    if (value){
     obj[value]++;
-    }
   }
   return obj;
 }
