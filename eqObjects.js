@@ -35,7 +35,7 @@ const famousPersonalities = {
 const eqObjects = function(obj1, obj2) {
   if (Object.entries(obj1).length === Object.entries(obj2).length) {
     for (let key in obj1) {
-      if (obj1[key] !== obj2[key] && !Array.isArray(obj1[key]) && !Array.isArray(obj2[key])) {
+      if (obj1[key] !== obj2[key] && obj2[key] !== obj1[key] && !Array.isArray(obj1[key]) && !Array.isArray(obj2[key])) {
         return false;
       } else if (Array.isArray(obj1[key]) && Array.isArray(obj2[key]) && !eqArrays(obj1[key], obj2[key])) {
         return false;
