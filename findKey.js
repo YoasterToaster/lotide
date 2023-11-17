@@ -38,10 +38,10 @@ const assertObjectsEqual = function (actual, expected) {
 
 const findKey = (obj, callback) => {
   for (let key in obj) {
-    if (obj[key] === undefined || obj[key] === null) {
-      return undefined;
-    } else if (callback(obj[key])) {
+    if (callback(obj[key])) {
       return key;
+    } else if (obj[key] === undefined || obj[key] === null) {
+      return undefined;
     }
   }
 };
