@@ -40,8 +40,6 @@ const findKey = (obj, callback) => {
   for (let key in obj) {
     if (callback(obj[key])) {
       return key;
-    } else if (obj[key] === undefined || obj[key] === null) {
-      return undefined;
     }
   }
 };
