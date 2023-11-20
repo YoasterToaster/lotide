@@ -42,11 +42,10 @@ assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
 
-// assertEqual("Bootcamp", "Bootcamp");
-// assertEqual(5, 1);
-// assertEqual("Bootcamps", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual("😊😊😊", "😊😊😊");
-// assertEqual("👌👌", "👌👌👌");
 
-//What tests should I be doing?  Please give me some suggestions
+/* Tets cases
+An array with more duplicate strings.
+An object with more keys to count.
+An array with no strings that match the keys in the object.
+An object with no truthy values.
+*/
