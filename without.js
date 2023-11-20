@@ -1,13 +1,8 @@
 const without = function (actual, expected) {
-  let newArray = [];
-  for (let i = 0; i < actual.length; i++) {
-    for (let j = 0; j < expected.length; j++){
-      if (actual[i] === expected[j]){
-        actual.slice(i, 1);
-      }
-    }
-  }
-  console.log(actual);
+  // Coming back to this question later, I am going to take this opportunity to test out the filter method()
+  let newArray = actual.filter(item => !expected.includes(item));
+  console.log(newArray);
+  return newArray;
 };
 
 const assertArraysEqual = function (actual, expected) {
@@ -32,8 +27,8 @@ const eqArrays = function (actual, expected) {
   return true;
 };
 
-without([1, 2, 3], [1]);
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual(["Bootcamps", "wee"], ["Bootcamps", "wee"]);
-assertArraysEqual(["Bootcamps", "wee"], ["Bootcamps", "wee"]);
-assertArraysEqual(["Bootcamps", "wee"], ["Bootcamps", "wee"]);
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+assertArraysEqual(without([1, 2, 3], [55]), [1, 2, 3]);
+assertArraysEqual(without([], []), []);
+assertArraysEqual(without(["hello", "sir", "sirius"], ["sir"]), ["hello", "sirius"]);
+assertArraysEqual(without(["hello", "sir", "sirius"], ["Sir"]), ["hello", "sir", "sirius"]);
