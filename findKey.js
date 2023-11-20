@@ -91,3 +91,5 @@ assertObjectsEqual(findKey({
   "Ora": { stars: 2 },
   "Akelarre": { stars: 3 }
 }, x => x.stars === 4), undefined); // this returns undefined
+
+module.exports = findKey;

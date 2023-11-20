@@ -58,3 +58,5 @@ assertObjectsEqual(historicalEvents, historicalEvents2);
 assertObjectsEqual(historicalEvents, famousPersonalities);
 assertObjectsEqual(historicalEvents, true);
 assertObjectsEqual(historicalEvents, false);
+
+module.exports = assertObjectsEqual;

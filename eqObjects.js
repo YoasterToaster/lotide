@@ -50,3 +50,5 @@ const eqObjects = function(obj1, obj2) {
 eqObjects(historicalEvents, historicalEvents);
 assertEqual(eqObjects(historicalEvents, famousPersonalities), false);
 assertEqual(eqObjects(historicalEvents, historicalEvents), true);
+
+module.exports = eqObjects;

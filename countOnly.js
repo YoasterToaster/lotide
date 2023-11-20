@@ -49,3 +49,5 @@ An object with more keys to count.
 An array with no strings that match the keys in the object.
 An object with no truthy values.
 */
+
+module.exports = countOnly;
