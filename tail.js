@@ -8,17 +8,15 @@ const assertEqual = function (actual, expected) {
 
 const tail = function (arr) {
   let newArray = arr.slice(1);
-  if (arr.length === 1){
-    return [];
-  }
   return newArray;
 };
 let orignalArray = [0, 1, 2, 4];
 let array1 = [1];
 console.log(tail([1, 2, 3]));
 console.log(tail(["nooo", 2, "hello"]));
+assertEqual(orignalArray.length, 4);
 assertEqual(tail([2, "hello"]).length, 1);
+assertEqual(orignalArray.length, 4);
 assertEqual(tail(["nooo", 2, "hello"])[1], "hello");
 assertEqual(tail([2, 'hello'])[0], "hello");
-assertEqual(orignalArray.length, 4);
-assertEqual(tail(array1), []);
+assertEqual(tail(array1).length, 0);
