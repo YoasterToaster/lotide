@@ -1,4 +1,5 @@
 const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
 assertEqual("Bootcamp", "Bootcamp");
 assertEqual(5, 1);

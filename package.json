@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@josephfoschia/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a utility library for javascript that is based off of the Lodash Project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -19,7 +19,11 @@
     "url": "git+https://github.com/YoasterToaster/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Joseph Foschia",
+    "email": "joefoschia@gmail.com",
+    "url": "https://github.com/YoasterToaster/lotide/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YoasterToaster/lotide/issues"

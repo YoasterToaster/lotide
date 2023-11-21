@@ -1,8 +1,17 @@
-const eqArrays = require('../eqArrays.js');
-const assertEqual = require('../assertEqual.js');
+const _ = require('../index.js');
+const assert = require('chai').assert;
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), false);
-assertEqual(eqArrays(["Bootcamps", "wee"], ["Bootcamps", "wee"]), true);
-assertEqual(eqArrays(["Bootcamps", "wee"], ["Bootcamps", "wee"]), false);
-assertEqual(eqArrays(["Bootcamps", "wee"], ["Bootcamps", "wee"]), false);
+describe('#head', () => {
+  it("returns true for [1, 2, 3], [1, 2, 3]", () => {
+    assert.strictEqual(_.eqArrays([1, 2, 3], [1, 2, 3]), true);
+  });
+  it("returns false for [1, 2, 3], [1, 2]", () => {
+    assert.strictEqual(_.eqArrays([1, 2, 3], [1, 2]), false);
+  });
+  it("returns ['Bootcamps', 'wee'] for [1, 2, 3]", () => {
+    assert.strictEqual(_.eqArrays(['Bootcamps', 'wee'], ['Bootcamps', 'wee']), true);
+  });
+  it("returns false for ['Bootcamps', 'wee'], ['Bootcamps', 'weee']", () => {
+    assert.strictEqual(_.eqArrays(['Bootcamps', 'wee'], ['Bootcamps', 'weee']), false);
+  });
+});

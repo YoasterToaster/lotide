@@ -1,14 +1,20 @@
-const tail = require('../tail.js');
-const assertEqual = require('../assertEqual.js');
+const _ = require('../index.js');
+const assert = require('chai').assert;
 
-let orignalArray = [0, 1, 2, 4];
-let array1 = [1];
-assertEqual(orignalArray.length, 4);
-console.log(tail([1, 2, 3]));
-assertEqual(orignalArray.length, 4);
-console.log(tail(["nooo", 2, "hello"]));
-assertEqual(tail([2, "hello"]).length, 1);
-assertEqual(tail(["nooo", 2, "hello"])[1], "hello");
-assertEqual(tail([2, 'hello'])[0], "hello");
-assertEqual(tail(array1).length, 0);
-assertEqual(tail([]).length, 0);
+describe("#tail", () => {
+  it("returns [2, 3] for [1, 2, 3]", () => {
+    assert.deepEqual(_.tail([1, 2, 3]), [2, 3]);
+  });
+  it("returns 1 for [2, 'hello'].length", () => {
+    assert.strictEqual(_.tail([2, 'hello']).length, 1);
+  });
+  it("returns ['hello'] for [2, 'hello'][0]", () => {
+    assert.strictEqual(_.tail([2, 'hello'])[0], 'hello');
+  });
+  it("returns [] for []", () => {
+    assert.deepEqual(_.tail([]), []);
+  });
+  it("returns 0 for [].length", () => {
+    assert.deepEqual(_.tail([]).length, 0);
+  });
+});
