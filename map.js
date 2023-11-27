@@ -1,6 +1,10 @@
+const assertEqual = require('./assertEqual');
+const assertArraysEqual = require('./assertArraysEqual.js');
+const eqArrays = require('./eqArrays.js');
+
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function(array, callback) {
+const map = function (array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
@@ -8,8 +12,8 @@ const map = function(array, callback) {
   return results;
 }
 
-map(words);
+console.log(map(words, word => word += word));
 
-//I need help on this one too
-
+assertArraysEqual(map(words, word => word += word), ["groundground", "controlcontrol", "toto", "majormajor", "tomtom"])
+assertEqual(eqArrays(map([1, 2, 3], num => num -= 1), [0, 1, 2]), true);
 module.exports = map;
